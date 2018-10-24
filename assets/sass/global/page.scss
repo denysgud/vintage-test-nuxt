@@ -1,24 +1,21 @@
 .page {
-  .page-row {
-    &.page-row_grey {
-      background-color: #262626;
-      color: #fff;
-      
-    }
-    &.page-row_pattern {
-      background-image: url('../images/pattern.png');
-      color: #000;
-    }
-  }
   &__title {
     font-weight: 300;
-    font-size: 34px;
+    font-size: 49px;
+    margin-bottom: 45px;
+  }
+  .page-block {
+    &__title {
+      font-weight: 300;
+      font-size: 34px;
+      margin-bottom: 45px;
+    }
+
   }
   &__container {
     width: auto;
     margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
+    overflow: hidden;
     @media screen {
       @media (min-width: $tablet-width) {
         width: 768px;
@@ -28,12 +25,19 @@
       }
     }
   }
-  &__column {
-    max-width: 100%;
-    flex: 0 0 100%;
-    &.page__column_half {
-      max-width: 50%;
-      flex: 0 0 50%;
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    &_with-padding {
+      padding: 60px 60px 80px;
+    }
+    &__column {
+      max-width: 100%;
+      flex: 0 0 100%;
+      &_half {
+        max-width: 50%;
+        flex: 0 0 50%;
+      }
     }
   }
 }

@@ -7,13 +7,29 @@
 
 body {
   font-family: "SuisseIntl";
-  font-weight: 400;
+  font-size: 16px;
+  font-weight: 300;
   color: #333;
 }
 
-.page {
-  .page__title {
+.text-part {
+  &_green {
+    color: #3db565;
+  }
+}
+
+.text {
+  line-height: 1.75;
+  margin-bottom: 20px;
+}
+
+.link {
+  color: #3db565;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 500;
+  &_tel {
     font-weight: 300;
-    font-size: 34px;
+    font-size: 28px;
   }
 }
