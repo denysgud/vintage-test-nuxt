@@ -1,0 +1,19 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: "SuisseIntl";
+  font-weight: 400;
+  color: #333;
+}
+
+.page {
+  .page__title {
+    font-weight: 300;
+    font-size: 34px;
+  }
+}

@@ -7,7 +7,7 @@
   </div>
 </template>
 
-<style>
+<style lang="scss">
 .VueToNuxtLogo {
   display: inline-block;
   animation: turn 2s linear forwards 1s;
@@ -16,16 +16,13 @@
   overflow: hidden;
   height: 180px;
   width: 245px;
-}
-
-.Triangle {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 0;
-}
-
+  .Triangle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+  }
 .Triangle--one {
   border-left: 105px solid transparent;
   border-right: 105px solid transparent;
@@ -58,6 +55,8 @@
   border-right: 35px solid transparent;
   border-bottom: 60px solid #fff;
 }
+}
+
 
 @keyframes turn {
   100% {

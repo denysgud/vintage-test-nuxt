@@ -27,6 +27,8 @@ module.exports = {
   ** Global CSS
   */
   css: [
+    'node_modules/normalize-scss/sass/_normalize.scss',
+    '@/assets/sass/styles.scss'
   ],
 
   /*

@@ -1,0 +1,39 @@
+.page {
+  .page-row {
+    &.page-row_grey {
+      background-color: #262626;
+      color: #fff;
+      
+    }
+    &.page-row_pattern {
+      background-image: url('../images/pattern.png');
+      color: #000;
+    }
+  }
+  &__title {
+    font-weight: 300;
+    font-size: 34px;
+  }
+  &__container {
+    width: auto;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    @media screen {
+      @media (min-width: $tablet-width) {
+        width: 768px;
+      }
+      @media (min-width: $desktop-width) {
+        width: 1280px;
+      }
+    }
+  }
+  &__column {
+    max-width: 100%;
+    flex: 0 0 100%;
+    &.page__column_half {
+      max-width: 50%;
+      flex: 0 0 50%;
+    }
+  }
+}
