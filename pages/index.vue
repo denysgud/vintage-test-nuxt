@@ -87,13 +87,21 @@
       <div class="page__container">
         <div class="row row_with-padding">
           <div class="row__column row__column_half">
-            <div class="form">
-              form
+            <div
+              id="form"
+              class="form">
+              <h2 class="page-block__title page-block__title_white">
+                Contact Us
+              </h2>
+              <contactForm />
             </div>
           </div>
           <div class="row__column row__column_half">
             <div class="request-info">
-              text
+              <p class="text text_form">
+                Please tell us more about your request and give us info
+                about your company and country
+              </p>
             </div>
           </div>
         </div>
@@ -104,11 +112,13 @@
 
 <script>
 import Tabs from '~/components/Tabs.vue';
+import ContactForm from '~/components/ContactForm.vue';
 import GoogleMap from "@/components/GoogleMap";
 
 export default {
   components: {
     Tabs,
+    ContactForm,
     GoogleMap
   },
   data() {
