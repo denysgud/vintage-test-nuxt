@@ -37,6 +37,7 @@
                       href="viber://add?number=41415446200">viber us</a><br>
                     Send form<br>
                     <a
+                      v-smooth-scroll="{ duration: 1000, offset: 0 }"
                       class="link"
                       href="#form">Contact us</a>
                   </p>

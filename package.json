@@ -17,6 +17,7 @@
     "cross-env": "^5.2.0",
     "normalize-scss": "^7.0.1",
     "nuxt": "^2.0.0",
+    "vue-smooth-scroll": "^1.0.13",
     "vue2-google-maps": "^0.10.2"
   },
   "devDependencies": {
