@@ -11,9 +11,11 @@
     font-weight: 500;
     text-transform: uppercase;
     margin-right: 25px;
+    transition: color .3s ease-out;
     cursor: pointer;
     &.active {
       color: #3db565;
+      transition: color .3s ease-in;
     }
   }
 }

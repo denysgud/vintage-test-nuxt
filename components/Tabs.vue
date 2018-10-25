@@ -8,7 +8,9 @@
         class="tabs__item"
         @click.prevent="selectTab(key)">{{ tab.city }}</li>
     </ul>
-    <tab :tab="activeTab" />
+    <tab
+      :tab="activeTab"
+      :class="{out: tabHidden}" />
   </div>
 </template>
 
@@ -30,14 +32,21 @@ export default {
   data() {
     return {
       activeId: 0,
-      activeTab: this.tabs[0]
+      activeTab: this.tabs[0],
+      tabHidden: false
     }
   },
   methods: {
     selectTab(tabId) {
       this.activeId = tabId;
-      this.activeTab = this.tabs[tabId];
-      this.$emit('officeChanged', tabId);
+      this.tabHidden = true;
+
+      let self = this;
+      setTimeout(function() {
+        self.tabHidden = false;
+        self.activeTab = self.tabs[tabId];
+        self.$emit('officeChanged', tabId);
+      }, 300);
     }
   }
 }
