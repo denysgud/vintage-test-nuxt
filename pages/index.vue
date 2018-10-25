@@ -144,5 +144,6 @@ export default {
 </script>
 
 <style lang="scss">
+  @import "@/assets/sass/global/variables.scss";
   @import "@/assets/sass/pages/home.scss";
 </style>

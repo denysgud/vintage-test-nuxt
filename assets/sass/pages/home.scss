@@ -2,14 +2,24 @@
   .page-block_offices {
     background-color: #262626;
     color: #fff;
-    height: 500px;
   }
   .page-block_form {
     background-image: url('../assets/images/pattern.png');
     color: #000;
   }
   .offices {
-    padding: 60px;
+    padding: 20px;
+    @media screen {
+      @media (min-width: $tablet-width) {
+        padding: 30px;
+      }
+      @media (min-width: $laptop-width) {
+        padding: 45px;
+      }
+      @media (min-width: $desktop-width) {
+        padding: 60px;
+      }
+    }
   }
   .form {
     padding-right: 30px;

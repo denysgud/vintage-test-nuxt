@@ -34,6 +34,11 @@ body {
   font-weight: 500;
   &_tel {
     font-weight: 300;
-    font-size: 28px;
+    font-size: 20px;
+    @media screen {
+      @media (min-width: $desktop-width) {
+        font-size: 28px;
+      }
+    }
   }
 }

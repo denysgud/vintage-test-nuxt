@@ -4,7 +4,13 @@
     padding: 0;
     list-style: none;
     display: flex;
+    flex-direction: column;
     margin-bottom: 45px;
+    @media screen {
+      @media (min-width: $tablet-width) {
+        flex-direction: row;
+      }
+    }
   }
   &__item {
     font-size: 12px;
@@ -12,10 +18,18 @@
     text-transform: uppercase;
     margin-right: 25px;
     transition: color .3s ease-out;
+    padding: 10px 0;
+    text-align: center;
     cursor: pointer;
     &.active {
       color: #3db565;
       transition: color .3s ease-in;
+    }
+    @media screen {
+      @media (min-width: $tablet-width) {
+        padding: 0;
+        text-align: left;
+      }
     }
   }
 }

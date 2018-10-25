@@ -37,5 +37,6 @@ export default {
 </script>
 
 <style lang="scss">
+  @import "@/assets/sass/global/variables.scss";
   @import "@/assets/sass/components/google-maps.scss";
 </style>
