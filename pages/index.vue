@@ -64,15 +64,20 @@
     </div>
     <div class="page-block page-block_offices page-block_no-padding">
       <div class="page__container">
-        <div class="row row_with-padding">
+        <div class="row">
           <div class="row__column row__column_half">
             <div class="offices">
-              offices
+              <h2 class="page-block__title">
+                Our Office
+              </h2>
+              <tabs
+                :tabs="tabs"
+                @officeChanged="changePoint" />
             </div>
           </div> 
           <div class="row__column row__column_half">
             <div class="map">
-              map
+              <googleMap :pointer-coords="currentPoint" />
             </div>
           </div>
         </div>
@@ -80,7 +85,7 @@
     </div>
     <div class="page-block page-block_form">
       <div class="page__container">
-        <div class="row">
+        <div class="row row_with-padding">
           <div class="row__column row__column_half">
             <div class="form">
               form
@@ -98,10 +103,31 @@
 </template>
 
 <script>
+import Tabs from '~/components/Tabs.vue';
+import GoogleMap from "@/components/GoogleMap";
 
 export default {
   components: {
-    
+    Tabs,
+    GoogleMap
+  },
+  data() {
+    return {
+      currentPoint: {}
+    }
+  },
+  computed: {
+    tabs() {
+      return this.$store.getters.allOffices;
+    }
+  },
+  mounted() {
+    this.currentPoint = this.tabs[0].coords;
+  },
+  methods: {
+    changePoint(tabId) {
+      this.currentPoint = this.tabs[tabId].coords;
+    }
   }
 }
 </script>
